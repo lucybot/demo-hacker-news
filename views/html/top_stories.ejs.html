@@ -1,0 +1,10 @@
+<h1>Hacker News - Top Stories</h1>
+<%- Lucy.code.for("storyID in result") %>
+<%- Lucy.include('story', {
+      indent: 2,
+      data: {
+        action: 'get_item',
+        answers: {itemID: {variable: 'storyID'}}
+      }
+}) %>
+<%- Lucy.code.rof() %>

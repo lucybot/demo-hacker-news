@@ -1,8 +1,12 @@
 <h2>
-  <a href="<%- Lucy.code.variable('result.url') %>">
+  <a href="<%- Lucy.code.variable('result.url') %>" target="_blank">
     <%- Lucy.code.variable('result.title') %>
   </a>
 </h2>
-By <a href="https://news.ycombinator.com/user?id=<%- Lucy.code.variable('result.by') %>">
+<% if (Lucy.answer('showAuthor')) { -%>
+By <a href="https://news.ycombinator.com/user?id=<%- Lucy.code.variable('result.by') %>" target="_blank">
   <%- Lucy.code.variable('result.by') %>
+<% } -%>
+<% if (Lucy.answer('showScore')) { -%>
 </a> - <%- Lucy.code.variable('result.score') %> points
+<% } -%>

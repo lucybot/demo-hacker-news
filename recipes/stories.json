@@ -1,0 +1,52 @@
+{
+  "name": "top_stories",
+  "title": "Hacker News Top Stories",
+  "description": "This recipe will teach you how to retrieve and display trending articles on Hacker News.",
+  "views": ["story_list", "story"],
+  "actions": ["top_stories", "get_item"],
+  "pages": [{
+    "view": "story_list",
+    "data": {
+      "action": "top_stories",
+      "extras": {
+        "startIdx": 0
+      }
+    }
+  }],
+  "control_sets": [{
+    "title": "Getting Top Stories",
+    "tip": "Here's how to retrieve the top stories from the API. This returns a JSON array of itemIDs, e.g. [48736, 2986, 10736]",
+    "affects": "top_stories",
+    "inputs": [{
+      "name": "storyType",
+      "label": "Story Type",
+      "type": "radio",
+      "choices": [
+        {"value": "topstories", "label": "Top Stories"},
+        {"value": "showstories", "label": "Show HN"},
+        {"value": "askstories", "label": "Ask HN"},
+        {"value": "jobstories", "label": "Jobs"}
+      ],
+      "default": "topstories"
+    }]
+  }, {
+    "title": "Getting Story Details",
+    "tip": "Here's how to retrieve the details for an individual story given its itemID.",
+    "affects": "get_item"
+  }, {
+    "title": "Displaying the Results",
+    "tip": "Here's how to display the resulting stories.",
+    "affects": "story",
+    "inputs": [{
+      "name": "showAuthor",
+      "label": "Show Author",
+      "type": "checkbox",
+      "default": true
+    }, {
+      "name": "showScore",
+      "label": "Show Score",
+      "type": "checkbox",
+      "default": true
+    }]
+  }]
+}

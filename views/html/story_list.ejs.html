@@ -1,5 +1,6 @@
 <h1>Hacker News - Top Stories</h1>
 <%- Lucy.code.for("storyID in result") %>
+<%- Lucy.if("index < 20") %>
 <%- Lucy.include('story', {
       indent: 2,
       data: {
@@ -7,4 +8,5 @@
         answers: {itemID: {variable: 'storyID'}}
       }
 }) %>
+<%- Lucy.fi() %>
 <%- Lucy.code.rof() %>

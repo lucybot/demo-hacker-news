@@ -15,7 +15,7 @@
   }],
   "control_sets": [{
     "title": "Getting Top Stories",
-    "tip": "Here's how to retrieve the top stories from the API. This returns a JSON array of itemIDs, e.g. [48736, 2986, 10736]",
+    "tip": "Use the Firebase API to retrieve the latest trending stories from the API as a JSON array of itemIDs, e.g. [48736, 2986, 10736]",
     "affects": "top_stories",
     "inputs": [{
       "name": "storyType",
@@ -31,11 +31,11 @@
     }]
   }, {
     "title": "Getting Story Details",
-    "tip": "Here's how to retrieve the details for an individual story given its itemID.",
+    "tip": "Once you have an itemID, use the /item endpoint to get its details",
     "affects": "get_item"
   }, {
     "title": "Displaying the Results",
-    "tip": "Here's how to display the resulting stories.",
+    "tip": "Here's one way to present the results.",
     "affects": "story",
     "inputs": [{
       "name": "showAuthor",

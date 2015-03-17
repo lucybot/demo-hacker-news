@@ -2,6 +2,7 @@
   "name": "top_stories",
   "title": "Hacker News Top Stories",
   "description": "This recipe will teach you how to retrieve and display trending articles on Hacker News.",
+  "free": true,
   "views": ["story_list", "story"],
   "actions": ["top_stories", "get_item"],
   "pages": [{
@@ -36,7 +37,7 @@
   }, {
     "title": "Displaying the Results",
     "tip": "Here's one way to present the results.",
-    "affects": "story",
+    "affects": "story_list",
     "inputs": [{
       "name": "showAuthor",
       "label": "Show Author",
